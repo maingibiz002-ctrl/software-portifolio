@@ -10,12 +10,14 @@
     --orange: #F04D07;
     --green:#00E676;
     --yellow:#FFB703;
+    --grey:#E5E5E5;
+    --mutedgrey:#a3a3a3;
 
 }
 body{
     background-color: var(--black);
     color: var(--white);
-    font-family: 'Times New Roman', Times, serif;
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -28,7 +30,10 @@ header nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1.5rem 6%;
+    padding: 1.5rem 0.6%;
+    margin: 0 auto;
+    max-width: 1200px;
+
 }
 header nav ul{
     display: flex;
@@ -72,7 +77,9 @@ footer a:hover{
     align-items: center;
     gap: 3rem;
     min-height: 80vh;
-    padding: 4rem 0;
+    padding: 1rem 0 10rem 0;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 .hero-image img{
     width: 100%;
@@ -81,6 +88,7 @@ footer a:hover{
     object-fit: cover;
     border-radius: 16px;
     border: 2px solid var(--yellow);
+    padding: 25px;
 
 }
 .hero-content{
@@ -99,7 +107,7 @@ footer a:hover{
 #hero h1{
     color: var(--white);
     font-size: clamp(2.1rem, 4.5vw, 3.5rem);
-    line-height: 1.15;
+    line-height: 1;
     max-width: 17ch;
 
 }
@@ -108,4 +116,210 @@ footer a:hover{
     font-size: 1.05rem;
     line-height: 1.5;
     max-width: 65ch;
+}
+.hero-buttons{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-top: o.2rem;
+}
+.btn {
+    display:inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.7rem 1.35rem ;
+    border-radius: 15px;
+    font-size: 1rem;
+    font-weight: 600;
+    text-decoration:none;
+    text-transform: capitalize;
+    border:0.1px solid transparent;
+    transition: transform 0.2s ease, background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+
+.btn-primary{
+    background-color: var(--yellow);
+    color: var(--black);
+
+}
+.btn-primary:hover{
+    background-color: var(--green);
+}
+.btn-secondary{
+    background-color: transparent;
+    color: var(--white);
+    border: 2px solid var(--yellow);
+}
+.btn-secondary:hover{
+    background-color: var(--green);
+}
+.btn-tertiary{
+    background-color: transparent;
+    color: var(--white);
+    border: 2px solid var(--yellow);
+
+}
+.btn-tertiary:hover{
+    background-color: var(--green);
+    
+    
+}
+
+.projects-grid{
+    display: grid;
+    grid-template-columns:repeat(auto-fit, minmax(300px, 1fr)) ;
+    gap: 20px;
+
+}
+.projects-card{
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+
+}
+.project-thumbnail{
+    aspect-ratio: 16/9;
+    width: 100%;
+    background-color: var(--white);
+    border: 4px solid var(--yellow);
+    border-radius: 12px;
+    overflow: hidden;
+
+}
+.project-card h3{
+    margin: 0;
+    color: var(--white);
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1.3;
+}
+.project-description{
+    margin:0 ;
+    color: var(--mutedgrey);
+    font-size: 0.85rem;
+    line-height: 1.5;
+    
+}
+.projects-grid{
+    max-width: 1000px;
+    margin: 0 auto;
+}
+.container h2{
+    color: var(--white);
+    padding: 2px 0px 15px 5px;
+    margin: 0 auto;
+    max-width: 1000px;
+    font-weight: 700;
+    letter-spacing: -0.02;
+    margin-bottom: 24px;
+}
+
+/* Shared Section Spacing & Width Lock */
+.about-section {
+    padding: 80px 0;
+}
+
+.contact-section {
+    padding: 80px 0 100px;
+}
+
+.section-inner {
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+/* Shared Section Heading Style */
+.section-header h2 {
+    color: var(--white, #ffffff);
+    font-size: 1.75rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    line-height: 1.2;
+    border-left: 4px solid var(--yellow, #F4B400);
+    padding-left: 14px;
+    margin-bottom: 24px;
+}
+
+/* About Story Card */
+.about-story {
+    background-color: #141414;
+    border: 1px solid #242424;
+    border-radius: 12px;
+    padding: 28px 32px;
+}
+
+.about-story p {
+    color: #d4d4d4;
+    font-size: 1rem;
+    line-height: 1.75;
+    margin-bottom: 16px;
+}
+
+.about-story p:last-child {
+    margin-bottom: 0;
+}
+
+/* Contact Lead Paragraph */
+.contact-lead {
+    color: #b3b3b3;
+    font-size: 1.05rem;
+    line-height: 1.65;
+    max-width: 640px;
+    margin-bottom: 28px;
+}
+
+/* Contact Icon Tiles */
+.contact-links {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.contact-icon-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    border-radius: 10px;
+    color: var(--white, #ffffff);
+    background-color: #141414;
+    border: 1px solid #2e2e2e;
+    text-decoration: none;
+    transition: transform 0.2s ease, border-color 0.2s ease, color 0.2s ease, background-color 0.2s ease;
+}
+
+.contact-icon-btn:hover {
+    border-color: var(--yellow, #F4B400);
+    color: var(--yellow, #F4B400);
+    transform: translateY(-2px);
+}
+
+/* Primary Gold Accent for WhatsApp */
+.contact-icon-primary {
+    background-color: var(--green, #F4B400);
+    border-color: var(--green, #F4B400);
+    color: #0a0a0a;
+}
+
+.contact-icon-primary:hover {
+    background-color: #e0a600;
+    border-color: #e0a600;
+    color: #0a0a0a;
+}
+
+/* Mobile Responsive Padding */
+@media (max-width: 600px) {
+    .about-story {
+        padding: 22px 20px;
+    }
+}
+/* Smooth glide instead of an instant jump */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Prevents a fixed/sticky navbar from covering the section heading */
+section[id] {
+    scroll-margin-top: 80px;
 }
