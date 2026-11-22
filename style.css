@@ -283,7 +283,7 @@ footer a:hover{
     height: 48px;
     border-radius: 10px;
     color: var(--white, #ffffff);
-    background-color: #141414;
+    background-color: blue;
     border: 1px solid #2e2e2e;
     text-decoration: none;
     transition: transform 0.2s ease, border-color 0.2s ease, color 0.2s ease, background-color 0.2s ease;
